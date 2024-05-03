@@ -1,0 +1,6 @@
+@Beemo.Server_HostAddress = http://localhost:5151
+
+GET {{Beemo.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
