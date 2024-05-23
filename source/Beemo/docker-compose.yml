@@ -1,0 +1,23 @@
+services:
+  mariadb:
+    image: mariadb:latest
+    ports: 
+      - "3306:3306"
+    environment:
+      - MARIADB_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+  beemo-server:
+    build:
+      dockerfile: Beemo.Server/Dockerfile
+      context: .
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mariadb
+  beemo-client:
+    build:
+      dockerfile: Beemo.Client/Dockerfile
+      context: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - beemo-server
