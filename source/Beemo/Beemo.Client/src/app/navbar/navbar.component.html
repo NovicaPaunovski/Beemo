@@ -1,0 +1,40 @@
+<header class="shadow-sm bg-white">
+  <nav class="container mx-auto p-4 flex justify-between items-center">
+    <a class="font-bold flex gap-2 items-center w-48 min-w-24 mr-5 cursor-pointer" href="/">
+      <div class="logo w-full"></div>
+    </a>
+    <ul class="flex gap-4 items-center">
+      <li>
+        <a class="cursor-pointer" href="/">
+          <p class="text-lg">
+            Home
+          </p>
+        </a>
+      </li>
+      <li class="border-l">
+        <div class="flex">
+          <button class="btn ml-4 max-h-9">
+            <p class="whitespace-nowrap">Log In</p>
+          </button>
+          <button class="btn-secondary ml-4 max-h-9">
+            <p class="whitespace-nowrap">Sign Up</p>
+          </button>
+        </div>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .logo {
+    height: 50px;
+
+    background-image: url("assets/images/logo.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (max-width: 768px) {
+      background-image: url("assets/images/logo_small.svg");
+    }
+  }
+</style>
