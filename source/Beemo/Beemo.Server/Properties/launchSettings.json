@@ -38,7 +38,7 @@
       "environmentVariables": {
         "ASPNETCORE_HTTPS_PORTS": "8081",
         "ASPNETCORE_HTTP_PORTS": "8080",
-        "BEEMO_DB_CONTEXT_CONNECTION": "Server=localhost;Port=3306;Database=Beemo;UID=root;PWD=Password123"
+        "BEEMO_DB_CONTEXT_CONNECTION": "Server=host.docker.internal;Port=3306;Database=Beemo;UID=root;PWD=Password123"
       },
       "publishAllPorts": true,
       "useSSL": true
