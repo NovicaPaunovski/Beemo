@@ -8,7 +8,7 @@ var connectionString = !string.IsNullOrEmpty(connectionStringEnvironmentVariable
 var allowBeemoClientOrigins = "_allowBeemoClientOrigins";
 var beemoClientOriginsEndpoint = !string.IsNullOrEmpty(Environment.GetEnvironmentVariable("BEEMO_CLIENT_ORIGINS_ENDPOINT")) ? Environment.GetEnvironmentVariable("BEEMO_CLIENT_ORIGINS_ENDPOINT") : throw new ArgumentNullException("Missing beemo client origins endpoint variable");
 
-builder.Services.AddDbContextFactory<ApplicationDbContext>(options => options.UseMySQL(connectionString));
+builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseMySQL(connectionString));
 
 builder.Services.AddAuthorization();
 builder.Services.AddIdentityApiEndpoints<ApplicationUser>()
